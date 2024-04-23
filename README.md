@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Astuto Chat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to Astuto Chat! Astuto Chat is a conversational chat interface that provides insights and answers to common questions related to cloud costs and savings. It uses a predefined dataset to offer suggestions and insights based on user queries.
 
-## Available Scripts
+You can access the deployed application on [Netlify](https://astuto-chat.netlify.app/).
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Conversational Interface**: Chat with the bot to get insights on cloud costs and savings.
+- **Suggested Responses**: Click on suggested messages to get detailed responses.
+- **Interactive Charts**: View pie charts and Sankey diagrams to visualize data.
+- **Feedback System**: Provide feedback on the responses received.
+- **Export Data**: Export data for further analysis.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: Frontend library for building user interfaces.
+- **React Google Charts**: For rendering interactive charts.
+- **FontAwesome**: For icons.
+- **JSON**: Data source for messages and responses.
+- **Tailwind**: For styling
 
-### `npm test`
+## Components
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### App.js
 
-### `npm run build`
+This is the main component that handles the state management and rendering of the chat interface. It manages messages, suggestions, and loading states. The component also handles sending and receiving messages, and scrolling to the latest message.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### ButtonActions.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This component renders buttons for adding to dashboard, exporting data, or ending the prototype. It receives props to handle different actions.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Card.js
 
-### `npm run eject`
+This component renders a card with tips, title, and body content. It's used to display saving areas or any additional information.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### EnterMessage.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This component renders the input field for typing messages. It captures user input and sends it to the parent component to handle the message.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Feedback.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This component provides a thumbs up/down feedback system for user satisfaction.
 
-## Learn More
+### ReceivedMessage.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This component renders the received messages from the bot. It displays the bot's response, charts (if any), and additional information in the form of cards.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### SentMessage.js
 
-### Code Splitting
+This component renders the sent messages from the user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Suggetions.js
 
-### Analyzing the Bundle Size
+This component renders suggested messages. It provides clickable suggestions that the user can click to send as a message.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Data
 
-### Making a Progressive Web App
+The `data.json` file contains predefined messages, topics, responses, and chart data used by the bot to provide insights and answers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## How to Run Locally
 
-### Advanced Configuration
+1. Clone the repository:
+  `git clone https://github.com/CG-B05S/astuto-chat.git`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Navigate to the project directory:
+  `cd astuto-chat`
 
-### Deployment
+3. Install dependencies:
+  `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+4. Run the app
+  `npm start`
 
-### `npm run build` fails to minify
+6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Feedback
+
+We welcome your feedback! Feel free to provide feedback through the chat interface or by raising issues on GitHub.
+
+---
+
+Thank you for checking out Astuto Chat! We hope you find it helpful and informative.
