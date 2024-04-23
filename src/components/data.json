@@ -1,0 +1,64 @@
+[
+  {
+    "topic": "Pie chart",
+    "message": "Top cloud costs by services in production account (#24542)",
+    "response": "Your production account (#24542) has accumulated costs of $100000 over the past month, here is the spread of cloud costs by services;",
+    "chartType": "PieChart",
+    "chartData": [
+      ["title", "value", "color"],
+      ["EC2 - 30% ($30000)", 30, "#4a5fc9"],
+      ["RDS - 20% ($20000)", 20, "#634cbd"],
+      ["S3 - 20% ($20000)", 20, "#d84fa1"],
+      ["Opensearch - 10% ($10000)", 10, "#ed5a5a"],
+      ["Elasticache - 10% ($10000)", 10, "#f58747"],
+      ["Others - 10% ($10000)", 10, "#f1ba4b"]
+    ]
+  },
+
+  {
+    "topic": "Top 2 saving areas",
+    "message": "How can I reduce my EC2 costs ?",
+    "response": "You can save $2500 per month overall in EC2 costs. Click here to access a detailed report",
+    "tips": "Here are your top 2 saving areas:",
+    "responseData": [
+      {
+        "title": "Bucket xyz-logs-1 (production account #12345)",
+        "body": "This bucket has 1TB of data, and does not use any storage tiers, there is more than 500GB of data that has been accessed. You can save $1000 by deleting the data or $700 by moving them to lower tier"
+      },
+      {
+        "title": "Bucket abc-user-1 (production account #12345)",
+        "body": "This bucket has abnormally high reads and writes cost of $5000 per month, increasing day by day. Consider reading smaller chuncks of data or changing your storage that is more cost effective for reads and write"
+      }
+    ]
+  },
+  {
+    "topic": "Dashboard",
+    "message": "Why are EC2 costs increasing so much?",
+    "response": "Your production account (#24542) has accumulated costs of $100000 over the past month, here is the spread of cloud costs by services;",
+    "chartType": "Sankey",
+    "chartData": [
+      ["From", "To", "Weight"],
+      ["Excess Costs", "Stagging", 1],
+      ["Excess Costs", "Anlytics", 5],
+      ["Production", "Customers", 3],
+      ["Production", "Product", 3],
+      ["Production", "Web App", 1],
+      ["Stagging", "Purpose", 1],
+      ["Stagging", "Product", 3],
+      ["Stagging", "Web App", 1],
+      ["Anlytics", "Purpose", 1],
+      ["Purpose", "API", 3],
+      ["Customers", "Workflow", 5],
+      ["Customers", "Amex", 1],
+      ["Customers", "API", 3],
+      ["Product", "Workflow", 5],
+      ["Product", "Amex", 1],
+      ["Product", "API", 3]
+    ]
+  },
+
+  {
+    "message": "Which are the largest s3 buckets by size?",
+    "response": "Your production account (#24542) has accumulated costs of $100000 over the past month, here is the spread of cloud costs by services;"
+  }
+]
